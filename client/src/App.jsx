@@ -5,6 +5,10 @@ import { ChannelList, Chat } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
 
 import {ChannelContainer, ChannelListContainer} from './Components';
+
+import './App.css';
+
+
 const apiKey = 'ya4t2da49psp';
 const client = StreamChat.getInstance(apiKey);
 const App = () => {
@@ -12,7 +16,7 @@ const App = () => {
     <div className='app__wrapper'>
         <Chat client={client} theme="team light">
            <ChannelListContainer 
-            
+
            />
            <ChannelContainer 
            

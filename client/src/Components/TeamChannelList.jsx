@@ -17,12 +17,22 @@ const TeamChannelList = ({ children, error = false, loading, type }) => {
     return (
       <div className="team-channel-list">
         <p className="team-channel-list__message loading">
-           {type === 'team' ? 'Channels' : 'Messages'}
+           {type === 'team' ? 'Channels' : 'Messages'} loading ...
         </p>
       </div>
     );
   }
-  return <div></div>;
+  return (
+      <div className="team-channel-list">
+          <div className="team-channel-list__header">
+              <p className="team-channel-list__header__title">
+                    {type === 'team' ? 'Channels' : 'Direct Messages'}
+              </p>
+              {/* button TODO:: */}
+          </div>
+          {children}
+      </div>
+  )
 };
 
 export default TeamChannelList;
